@@ -1,0 +1,9 @@
+@CHARSET "UTF-8";
+
+.form-wrapper, #loc_sorted {
+	margin-top: 40px;
+}
+
+.searchFormWrapper {
+	margin-bottom: 40px;
+}
