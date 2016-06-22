@@ -18,12 +18,12 @@ if (isset($_POST['submit'])) {
 		$long = $data_arr[1];
 		$formatted_address = $db->quote($data_arr[2]);
 		
-		echo $formatted_address;
+		//echo $formatted_address;
 		
 		$result = $db -> query("INSERT INTO `locations` (`loc_name`, `loc_lat`, `loc_long`) VALUES (" . $formatted_address . ", '" . $lat. "', '" . $long. "')");
 		
 		if ($result !== false) {
-			//header("Location: " . $_SERVER['HTTP_REFERER']);
+			header("Location: " . $_SERVER['HTTP_REFERER']);
 		} else {
 			echo "No location was added try again!";
 			echo $db->error();
